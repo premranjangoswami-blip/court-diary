@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-navy-900 font-sans;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-semibold text-navy-900;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-navy-800 text-white px-4 py-2 rounded-lg font-medium
+           hover:bg-navy-700 active:bg-navy-900 transition-colors
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply bg-white text-navy-800 border border-navy-300 px-4 py-2 rounded-lg font-medium
+           hover:bg-navy-50 active:bg-navy-100 transition-colors
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-danger {
+    @apply bg-red-600 text-white px-4 py-2 rounded-lg font-medium
+           hover:bg-red-700 active:bg-red-800 transition-colors
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-gold {
+    @apply bg-gold-500 text-white px-4 py-2 rounded-lg font-medium
+           hover:bg-gold-600 active:bg-gold-700 transition-colors
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .form-label {
+    @apply block text-sm font-medium text-navy-700 mb-1;
+  }
+
+  .form-input {
+    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-navy-500 focus:border-transparent
+           placeholder-gray-400 bg-white;
+  }
+
+  .form-select {
+    @apply w-full border border-gray-300 rounded-lg px-3 py-2 text-sm
+           focus:outline-none focus:ring-2 focus:ring-navy-500 focus:border-transparent
+           bg-white;
+  }
+
+  .form-error {
+    @apply text-red-600 text-xs mt-1;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-4;
+  }
+
+  .stat-card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100 p-5
+           flex items-center gap-4;
+  }
+
+  .badge-active {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-green-100 text-green-800;
+  }
+
+  .badge-disposed {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-gray-100 text-gray-700;
+  }
+
+  .badge-stayed {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium
+           bg-yellow-100 text-yellow-800;
+  }
+
+  .hearing-today {
+    @apply border-l-4 border-red-500 bg-red-50;
+  }
+
+  .hearing-tomorrow {
+    @apply border-l-4 border-gold-500 bg-gold-50;
+  }
+
+  .hearing-upcoming {
+    @apply border-l-4 border-navy-400 bg-navy-50;
+  }
+}
